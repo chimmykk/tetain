@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Get Request Example</title>
+  </head>
+  <body onload="makeRequest()">
+    <p id="response"></p>
+
+    <script>
+      function makeRequest() {
+        fetch('http://localhost:3000/wallet-address')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('response').innerHTML = data;
+          })
+          .catch(error => {
+            console.error(error);
+            document.getElementById('response').innerHTML = 'Error: ' + error.message;
+          });
+      }
+    </script>
+  </body>
+</html>

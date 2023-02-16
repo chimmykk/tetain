@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "eth-sig-util": "^3.0.1",
+    "web3": "^1.8.2"
+  }
+}
